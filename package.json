@@ -1,0 +1,49 @@
+{
+  "name": "@bmbj/change-tracking",
+  "version": "1.0.0",
+  "description": "A framework-agnostic TypeScript library for tracking, replaying, and managing object changes with event-sourcing patterns",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "change-tracking",
+    "event-sourcing",
+    "audit-trail",
+    "state-management",
+    "diff",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
