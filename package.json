@@ -1,5 +1,5 @@
 {
-  "name": "@bmbj/change-tracking",
+  "name": "@mbmj/change-tracking",
   "version": "1.0.0",
   "description": "A framework-agnostic TypeScript library for tracking, replaying, and managing object changes with event-sourcing patterns",
   "main": "dist/index.js",

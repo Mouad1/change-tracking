@@ -13,7 +13,7 @@ A framework-agnostic TypeScript library for tracking, replaying, and managing ob
 ## Installation
 
 ```bash
-npm install @bmbj/change-tracking
+npm install @mbmj/change-tracking
 ```
 
 ## Quick Start
@@ -21,7 +21,7 @@ npm install @bmbj/change-tracking
 ### Applying Changes to Objects
 
 ```typescript
-import { DocumentChangeParser, ChangeBuilder } from "@bmbj/change-tracking";
+import { DocumentChangeParser, ChangeBuilder } from "@mbmj/change-tracking";
 
 // Original object
 const user = { name: "John", age: 25 };
@@ -43,7 +43,7 @@ console.log(user); // { name: 'John', age: 25 }
 ### Building Changes with Fluent API
 
 ```typescript
-import { ChangeBuilder } from "@bmbj/change-tracking";
+import { ChangeBuilder } from "@mbmj/change-tracking";
 
 const change = new ChangeBuilder()
   .createString("name", "John")
@@ -55,7 +55,7 @@ const change = new ChangeBuilder()
 ### Working with Nested Properties
 
 ```typescript
-import { DocumentChangeParser, ChangeBuilder } from "@bmbj/change-tracking";
+import { DocumentChangeParser, ChangeBuilder } from "@mbmj/change-tracking";
 
 const data = {
   user: {
@@ -83,7 +83,7 @@ import {
   DocumentChangeParser,
   ChangeType,
   PropertyType,
-} from "@bmbj/change-tracking";
+} from "@mbmj/change-tracking";
 
 const data = { items: ["a", "b", "c"] };
 
@@ -121,7 +121,7 @@ DocumentChangeParser.applyChange(data, deleteChange);
 Compare datasets to identify changes:
 
 ```typescript
-import { DiffIdentifier } from "@bmbj/change-tracking";
+import { DiffIdentifier } from "@mbmj/change-tracking";
 
 interface Product {
   id: string;
@@ -278,7 +278,7 @@ import {
   InvalidPathError,
   ConflictError,
   ChangeTrackingError,
-} from "@bmbj/change-tracking";
+} from "@mbmj/change-tracking";
 
 try {
   DocumentChangeParser.applyChange(obj, change, { validatePaths: true });
